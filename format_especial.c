@@ -11,9 +11,9 @@
 
 void format_especial(__attribute__((unused)) va_list arg_add, char *buffer, int *count)
 {
-	int len = *count;
+	int lent = *count;
 
-	buffer[len] = '%';
-	len++;
-	*count = len;
+	buffer[lent] = '%';
+	lent++;
+	*count = lent;
 }

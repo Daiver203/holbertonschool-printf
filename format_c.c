@@ -11,9 +11,9 @@
 
 void format_c(va_list arg_add, char *buffer, int *count)
 {
-	int len = *count;
+	int lent = *count;
 
-	buffer[len] = va_arg(arg_add, int);
-	len++;
-	*count = len;
+	buffer[lent] = va_arg(arg_add, int);
+	lent++;
+	*count = lent;
 }

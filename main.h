@@ -9,7 +9,7 @@ typedef struct vtype
 {
 	char tp;
 	void (*f)(va_list  arg_add, char *buffer, int *count);
-} vtype_t
+} vtype_t;
 
 int _printf(const char *format, ...);
 void format_c(va_list arg_add, char *buffer, int *count);

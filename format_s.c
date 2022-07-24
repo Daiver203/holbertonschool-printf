@@ -19,8 +19,8 @@ void format_s(va_list arg_add, char *buffer, int *count)
 		str = "(null)";
 	while (str[i] != '\0')
 	{
-		buffer[len] = str[i];
-		len++, i++;
+		buffer[lent] = str[i];
+		lent++, i++;
 	}
-	*count = len;
+	*count = lent;
 }
