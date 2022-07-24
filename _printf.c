@@ -34,7 +34,7 @@ int _printf(const char *format, ...)
 					count1--;
 					buffer[count] = format[count1];
 					count++;
-				       	count1;
+				       	count1++;
 				}
 			}
 		} else
