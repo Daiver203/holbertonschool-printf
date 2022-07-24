@@ -13,7 +13,9 @@ int _printf(const char *format, ...)
 	char buffer[1024];
 	vtype_t spec[] = {
 		{'c', format_c}, {'s', format_s}, {'%', format_especial}}
+
 	va_start(arg_add, format);
+
 	if (!format || (format[count1] == '%' && !format[count1 + 1]))
 		return (-1);
 
@@ -39,7 +41,8 @@ int _printf(const char *format, ...)
 		} else
 		{
 			buffer[count] = format[count1];
-			count++, count1++;
+			count++;
+		       	count1++;
 		}
 	}
 	va_end(arg_add);
