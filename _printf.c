@@ -10,9 +10,10 @@ int _printf(const char *format, ...)
 {
 	va_list arg_add;
 	int count1 = 0, count = 0, i;
-	char buffer[1024];
+	char buffer[2044];
 	vtype_t spec[] = {
-		{'c', format_c}, {'s', format_s}, {'%', format_especial}};
+		{'c', format_c}, {'s', format_s}, {'%', format_especial}
+		{'d', format_d}, {'i', format_d}, {'\0', NULL}};
 	va_start(arg_add, format);
 	if (!format || (format[count1] == '%' && !format[count1 + 1]))
 		return (-1);
