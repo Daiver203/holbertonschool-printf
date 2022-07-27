@@ -14,7 +14,7 @@ typedef struct vtype
 int _printf(const char *format, ...);
 void format_c(va_list arg_add, char *buffer, int *count_buffer);
 void format_s(va_list arg_add, char *buffer, int *count_buffer);
-void format_especial(va_list arg_add, char *buffer, int *count_buffer);
+void E(va_list arg_add, char *buffer, int *count_buffer);
 void format_d(va_list arg_add, char *buffer, int *count_buffer);
 void *itos(char str[], long int n);
 

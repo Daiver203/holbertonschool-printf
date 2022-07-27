@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * format_especial - specificer %
+ * E - specificer %
  * @arg_add: data of input
  * @buffer: space of storage
  * @count_buffer: count of int
@@ -9,7 +9,7 @@
  * Return: void
 */
 
-void format_especial(va_list arg_add, char *buffer, int *count_buffer)
+void E(__attribute__((unused))va_list arg_add, char *buffer, int *count_buffer)
 {
 	int lent = *count_buffer;
 

@@ -11,7 +11,7 @@ int _printf(const char *format, ...)
 	va_list arg_add;
 	int count = 0, count_buffer = 0, i;
 	char buffer[2048];
-	vtype_t spec[] = {{'c', format_c}, {'s', format_s}, {'%', format_especial},
+	vtype_t spec[] = {{'c', format_c}, {'s', format_s}, {'%', E},
 			{'d', format_d}, {'i', format_d}, {'\0', NULL}};
 	va_start(arg_add, format);
 	if (!format || (format[count] == '%' && !format[count + 1]))
