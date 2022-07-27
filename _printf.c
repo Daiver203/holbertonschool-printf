@@ -24,7 +24,8 @@ int _printf(const char *format, ...)
 			{
 				if (format[count] == spec[i].tp)
 				{	spec[i].f(arg_add, buffer, &count_buffer);
-					count++, break;
+					count++;
+					break;
 				} else if (spec[i + 1].tp == '\0')
 				{	count--;
 					buffer[count_buffer] = format[count];
