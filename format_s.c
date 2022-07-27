@@ -4,7 +4,7 @@
  * format_s - specificer s
  * @arg_add: data of input
  * @buffer: space of storage
- * @count: count of int
+ * @count_buffer: count of int
  *
  * Return: void
 */
