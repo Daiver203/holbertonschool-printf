@@ -9,9 +9,9 @@
  * Return: void
 */
 
-void format_s(va_list arg_add, char *buffer, int *count)
+void format_s(va_list arg_add, char *buffer, int *count_buffer)
 {
-	int i = 0, lent = *count;
+	int i = 0, lent = *count_buffer;
 	char *str = NULL;
 
 	str = va_arg(arg_add, char *);
@@ -22,5 +22,5 @@ void format_s(va_list arg_add, char *buffer, int *count)
 		buffer[lent] = str[i];
 		lent++, i++;
 	}
-	*count = lent;
+	*count_buffer = lent;
 }

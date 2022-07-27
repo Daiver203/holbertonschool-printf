@@ -9,43 +9,43 @@
 int _printf(const char *format, ...)
 {
 	va_list arg_add;
-	int count1 = 0, count = 0, i;
-	char buffer[2044];
+	int count = 0, count_buffer = 0, i;
+	char buffer[2048];
 	vtype_t spec[] = {
-		{'c', format_c}, {'s', format_s}, {'%', format_especial},
-		{'d', format_d}, {'i', format_d}, {'\0', NULL}};
+			{'c', format_c}, {'s', format_s}, {'%', format_especial},
+			{'d', format_d}, {'i', format_d}, {'\0', NULL}};
 	va_start(arg_add, format);
-	if (!format || (format[count1] == '%' && !format[count1 + 1]))
+	if (!format || (format[count] == '%' && !format[count + 1]))
 		return (-1);
 
-	while (format[count1])
+	while (format[count])
 	{
-		if (format[count1] == '%')
+		if (format[count] == '%')
 		{
-			count1++;
+			count++;
 			for (i = 0; spec[i].tp != '\0'; i++)
 			{
-				if (format[count1] == spec[i].tp)
+				if (format[count] == spec[i].tp)
 				{
-					spec[i].f(arg_add, buffer, &count);
-					count1++;
+					spec[i].f(arg_add, buffer, &count_buffer);
+					count++;
 					break;
 				} else if (spec[i + 1].tp == '\0')
 				{
-					count1--;
-					buffer[count] = format[count1];
-					count++;
-				       	count1++;
+					count--;
+					buffer[count_buffer] = format[count];
+					count_buffer++;
+				       	count++;
 				}
 			}
 		} else
 		{
-			buffer[count] = format[count1];
-			count++;
-		       	count1++;
+			buffer[count_buffer] = format[count];
+			count_buffer++;
+		       	count++;
 		}
 	}
 	va_end(arg_add);
-	write(1, buffer, count);
-	return (count);
+	write(1, buffer, count_buffer);
+	return (count_buffer);
 }

@@ -9,11 +9,11 @@
  * Return: void
 */
 
-void format_c(va_list arg_add, char *buffer, int *count)
+void format_c(va_list arg_add, char *buffer, int *count_buffer)
 {
-	int lent = *count;
+	int lent = *count_buffer;
 
 	buffer[lent] = va_arg(arg_add, int);
 	lent++;
-	*count = lent;
+	*count_buffer = lent;
 }

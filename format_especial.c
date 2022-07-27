@@ -9,11 +9,11 @@
  * Return: void
 */
 
-void format_especial(__attribute__((unused)) va_list arg_add, char *buffer, int *count)
+void format_especial(__attribute__((unused)) va_list arg_add, char *buffer, int *count_buffer)
 {
-	int lent = *count;
+	int lent = *count_buffer;
 
 	buffer[lent] = '%';
 	lent++;
-	*count = lent;
+	*count_buffer = lent;
 }
