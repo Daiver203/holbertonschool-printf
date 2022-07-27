@@ -3,8 +3,8 @@
 /**
  * format_c - specificer c
  * @arg_add: data of input
- * @copy: space of storage
- * @count: count of int
+ * @buffer: space of storage
+ * @count_buffer: count of int
  *
  * Return: void
 */

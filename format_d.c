@@ -2,9 +2,10 @@
 
 /**
  * format_d - function that returns an int to signed decimal
- * @valist: arguments passed
  * @buffer: values stored
- * @index: tracks index position
+ * @arg_add: data of input
+ * @buffer: space of storage
+ * @count_buffer: count of int
 */
 
 void format_d(va_list arg_add, char *buffer, int *count_buffer)
@@ -14,7 +15,8 @@ void format_d(va_list arg_add, char *buffer, int *count_buffer)
 
 	i = va_arg(arg_add, int);
 	itos(str, i);
-	while (str[j] != '\0'){
+	while (str[j] != '\0')
+	{
 		buffer[len] = str[j];
 		len++, j++;
 	}
