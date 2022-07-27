@@ -8,7 +8,7 @@
  * Return: char array
 */
 
-char *itos(char str[], long int n)
+int *itos(char str[], long int n)
 {
 	int i, temp, div, length, last;
 
